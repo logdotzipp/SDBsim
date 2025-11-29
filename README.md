@@ -11,6 +11,7 @@ In it's current state, it is recommended to only use the model to compare relati
 
 This model simulates two cylinders connected by a volume of "dead space" where the cylinders do not travel. This would be sufficient is the event took place slowly, however a significant limiting factor of dart blasters comes from flow through a small orifice.
 The model used here is the isentropic model for compressible subsonic flow through an orifice: https://web.cecs.pdx.edu/~gerry/class/ME322/notes/pdf/compressibleMdot.pdf
+ 
 The orifice is simply the smallest cross sectional area in the flow. Oftentimes this may be at the back of the barrel, in whcih case the dead volume of the barrel is 0. 
 
 <img width="1802" height="611" alt="image" src="https://github.com/user-attachments/assets/7aef20bc-0439-41b9-a289-321d5e659c80" />
