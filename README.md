@@ -20,4 +20,5 @@ The model currently assumes that all air selas are perfect, and mass is conserve
 
 
 The simulation results are shown using matplotlib, and the exit fps is printed to the console. The remaining plunger travel when the dart exits the barrel is also shown.
+ 
 <img width="800" height="921" alt="image" src="https://github.com/user-attachments/assets/b468b317-f38e-4938-9238-24627486b7cb" />
