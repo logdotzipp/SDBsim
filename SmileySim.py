@@ -2,18 +2,24 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
+# Variables configured to match the bolt action Smiley by Mighty Shrub
+
+
+
+
 # Define variables
-T_p  = 125/1000 #Plunger Travel (m)
-L_b = 400/1000 #Barrel Length (m)
+T_p  = 79.5/1000 #Plunger Travel (m)
+L_b = 350/1000 #Barrel Length (m)
 A_p  = (np.pi*((1.375*25.4)/2)**2)/(1000**2) #Cross Sectional Area of the Plunger Tube (m^2)
-m_p = 100/1000 # Mass of the plunger (kg)
-s = 10/1000 # Spring Preload (m) - Preload distance on the spring at rest (before the plunger is primed)
+m_p = 40/1000 # Mass of the plunger (kg)
+s = 50/1000 # Spring Preload (m) - Preload distance on the spring at rest (before the plunger is primed)
              # The total initial spring displacement is calculated as the Spring Preload + Plunger travel
 K_s = 3.5 * 175.127 #Spring Rate (N/m)
 A_b  = (np.pi*(12.7/2)**2)/(1000**2) #Cross Sectional Area of the barrel (m^2)
 m_d = 1/1000 # Mass of the dart (kg)
-V_d1 = 0.0000001 # Dead space volume on plunger side of orifice (m^3)
-V_d2 = ((np.pi*(10/2)**2)*100)/(1000**3) # Dead space volume on barrel side of orifice (m^3)
+V_d1 = 3845/(1000**3) # Dead space volume on plunger side of orifice (m^3)
+V_d2 = 2053/(1000**3) # Dead space volume on barrel side of orifice (m^3)
+                      # Dead Space volume derived from CAD
 Patm = 101.3 * 1000 # Atmospheric pressure (Pa aka N/m^2)
 Tatm = 21 + 273.3 # Temp of air in plunger (K). Assumed constant.
 
@@ -22,8 +28,9 @@ Tatm = 21 + 273.3 # Temp of air in plunger (K). Assumed constant.
 # Perfectly square edge corners result in a discharge coeff of around 0.5
 # Significant Rounding of the orifice edge can increase the discharge coeff to about 0.94
 # See Figure 10 from https://ntrs.nasa.gov/api/citations/19690028630/downloads/19690028630.pdf
-C_d = 0.5
-A_o = (np.pi*(10/2)**2)/(1000**2) # Area of the orifice (Smallest area in flow)
+C_d = 0.95 # Smiley has very gradual orifice taper
+A_o = 38.283/(1000**2) # Area of the orifice (Smallest area in flow)
+                       # Smiley value obtained from CAD model
 
 R = 287 # Ideal Gas constant for air (J/(kg*K)
 k = 1.4 # Specific heat ratio of air
