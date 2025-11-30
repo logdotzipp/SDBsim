@@ -16,7 +16,7 @@ The orifice is simply the smallest cross sectional area in the flow. Oftentimes 
 
 <img width="1802" height="611" alt="image" src="https://github.com/user-attachments/assets/7aef20bc-0439-41b9-a289-321d5e659c80" />
 
-The model currently assumes that all air selas are perfect, and mass is conserved within the system.
+The model currently assumes that all air seals are perfect, and mass is conserved within the system.
 
 
 The simulation results are shown using matplotlib, and the exit fps is printed to the console. The remaining plunger travel when the dart exits the barrel is also shown.
